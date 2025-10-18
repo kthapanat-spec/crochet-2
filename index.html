@@ -3,73 +3,45 @@
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>My Quick Website</title>
+    <title>Homepage - Two Page Site</title>
+    <!-- Load Tailwind CSS -->
+    <script src="https://cdn.tailwindcss.com"></script>
+    <!-- Use Inter font family -->
     <style>
-        /* This is the CSS (the "Nice UI" part) */
-        
-        /* 1. Basic Page Styles */
         body {
-            font-family: -apple-system, BlinkMacSystemFont, "Segoe UI", Roboto, Helvetica, Arial, sans-serif;
-            background-color: #f4f7f6; /* Light gray background */
-            display: flex;
-            justify-content: center;
-            align-items: center;
-            height: 100vh; /* Make the page full height */
-            margin: 0;
-            color: #333; /* Dark gray text */
+            font-family: 'Inter', sans-serif;
+            background-color: #f8fafc; /* Light gray background */
         }
-
-        /* 2. The Main Content Box */
-        .container {
-            text-align: center;
-            background-color: #ffffff; /* White background */
-            padding: 40px 50px;
-            border-radius: 12px; /* Rounded corners */
-            box-shadow: 0 10px 30px rgba(0, 0, 0, 0.07); /* Soft shadow */
-            max-width: 500px;
-        }
-
-        /* 3. The Text */
-        h1 {
-            font-size: 2.5em; /* Big headline */
-            margin-bottom: 10px;
-            color: #1a1a1a;
-        }
-
-        p {
-            font-size: 1.1em;
-            line-height: 1.6; /* Easy to read spacing */
-            margin-bottom: 30px;
-        }
-
-        /* 4. The Button */
-        .cta-button {
-            display: inline-block;
-            background-color: #007aff; /* Bright blue */
-            color: #ffffff;
-            padding: 14px 28px;
-            font-size: 1em;
-            font-weight: bold;
-            text-decoration: none; /* Remove underline */
-            border-radius: 8px; /* Rounded button */
-            transition: background-color 0.3s ease; /* Smooth hover effect */
-        }
-
-        .cta-button:hover {
-            background-color: #0056b3; /* Darker blue on hover */
-        }
-
     </style>
 </head>
-<body>
+<body class="min-h-screen flex items-center justify-center p-4">
 
-    <div class="container">
-        <h1>Welcome! 👋</h1>
-        <p>
-            This is a simple, clean webpage example. You can build on this
-            to create something amazing.
-        </p>
-        <a href="#" class="cta-button">Get Started</a>
+    <div class="w-full max-w-lg bg-white rounded-xl shadow-2xl p-8 md:p-12 text-center transform transition duration-500 hover:scale-[1.02]">
+        
+        <header class="mb-8">
+            <h1 class="text-5xl font-extrabold text-gray-900 mb-3">
+                Welcome Home!
+            </h1>
+            <p class="text-xl text-gray-500">
+                This is the main entry point of your static website.
+            </p>
+        </header>
+
+        <main>
+            <p class="text-lg text-gray-700 mb-8 leading-relaxed">
+                To create a multi-page GitHub site, you simply link to the separate HTML files. Click the button below to navigate to the second page!
+            </p>
+
+            <!-- Navigation Button to the Second Page -->
+            <!-- The href attribute links directly to the second file name -->
+            <a href="second_page.html" class="inline-block px-8 py-3 bg-indigo-600 text-white font-bold text-lg rounded-full shadow-lg hover:bg-indigo-700 focus:outline-none focus:ring-4 focus:ring-indigo-300 transition transform hover:translate-y-[-2px]">
+                Go to Second Page &rarr;
+            </a>
+        </main>
+        
+        <footer class="mt-12 text-sm text-gray-400">
+            <p>&copy; 2025 Static Website Demo. Hosted on GitHub.</p>
+        </footer>
     </div>
 
 </body>
